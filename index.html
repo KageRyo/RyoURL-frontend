@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <!-- 網頁標題和語系 -->
+    <meta charset="utf-8">
+    <title>RyoURL 短網址系統 - KageRyo Developer</title>
+    <link rel="icon" type="img/icon" href="assets/img/favicon.ico">
+    <!-- 核心：Tocas UI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas/5.0.1/tocas.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocas/5.0.1/tocas.min.js"></script>
+    <!-- 字體：Noto Sans TC -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
+    <!-- 啟用：響應式設計 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+    <!-- 頂部列 -->
+    <div class="ts-content is-tertiary is-fitted">
+        <div clsss="ts-container">
+            <div class="ts-app-topbar has-dark">
+                <!-- 頂部列左側 -->
+                <div class="start">
+                    <a href="index.html" class="item is-text">RyoURL 短網址系統</a>
+                </div>
+                <!-- 頂部列右側 -->
+                <div class="end">
+                    <div class="ts-tab is-relaxed">
+                        <a href="index.html" class="item is-active">首頁</a>
+                        <a href="https://kageryo.coderyo.com/about.html" target="_blank" class="item">關於我</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主內容 -->
+    <div class="ts-container is-very-narrow has-vertically-spaced-large">
+        <div class="ts-wrap is-vertical">
+            <!-- 建立短網址 -->
+            <div class="ts-grid">
+                <div class="column is-fluid">
+                    <div class="ts-input is-solid">
+                        <input type="text" placeholder="輸入您想縮短的網址">
+                    </div>
+                </div>
+                <button class="ts-button" data-dialog="createShortUrl">
+                    縮吧
+                </button>
+                <!-- 點擊按鈕後的快顯視窗 -->
+                <dialog class="ts-modal" id="createShortUrl">
+                    <div class="content">
+                        <div class="ts-content">
+                            <div class="ts-header">建立結果</div>
+                        </div>
+                        <div class="ts-divider"></div>
+                        <div class="ts-content">
+                            <p>您輸入的網址：</p>
+                            <p>建立的短網址：</p>
+                        </div>
+                        <div class="ts-divider"></div>
+                        <div class="ts-content is-tertiary is-end-aligned">
+                            <button class="ts-button" data-dialog="createShortUrl">關閉</button>
+                        </div>
+                    </div>
+                </dialog>
+            </div>
+            <!-- 查詢原網址 -->
+            <div class="ts-grid">
+                <div class="column is-fluid">
+                    <div class="ts-input is-solid">
+                        <input type="text" placeholder="輸入您想查詢的網址">
+                    </div>
+                </div>
+                <div class="column">
+                    <button class="ts-button" data-dialog="lookforOriUrl">
+                        查詢
+                    </button>
+                    <!-- 點擊按鈕後的快顯視窗 -->
+                    <dialog class="ts-modal" id="lookforOriUrl">
+                        <div class="content">
+                            <div class="ts-content">
+                                <div class="ts-header">查詢結果</div>
+                            </div>
+                            <div class="ts-divider"></div>
+                            <div class="ts-content">
+                                <p>搜尋的短網址：</p>
+                                <p>對應的原網址：</p>
+                                <p>被建立的日期：</p>
+                            </div>
+                            <div class="ts-divider"></div>
+                            <div class="ts-content is-tertiary is-end-aligned">
+                                <button class="ts-button" data-dialog="lookforOriUrl">關閉</button>
+                            </div>
+                        </div>
+                    </dialog>
+                </div>
+            </div>
+            <!-- 查詢所有被建立的短網址 -->
+            <div class="ts-divider"></div>
+            <div class="column">
+                <button class="ts-button">小孩子才做選擇，我全都查！</button>
+            </div>
+        </div>
+        <div class="ts-notice is-negative has-vertically-spaced-large">
+            <div class="title">操作失敗</div>
+            <div class="content">您必須輸入正確的網址才能操作！</div>
+        </div>
+    </div>
+    <!-- 底部列 -->
+</body>
+
+</html>
